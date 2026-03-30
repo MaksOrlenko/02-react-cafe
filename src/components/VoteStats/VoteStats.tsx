@@ -13,14 +13,12 @@ export default function VoteStats({
   positiveRate,
 }: VoteStatsProps) {
   return (
-    <div>
-      <p>Good: {votes.good}</p>
-      <p>Neutral: {votes.neutral}</p>
-      <p>Bad: {votes.bad}</p>
-      <p>Total: {totalVotes}</p>
-      <p>Positive: {positiveRate}%</p>
+    <div className={css.container}>
+      <p className={css.item}>Good: {votes.good}</p>
+      <p className={css.item}>Neutral: {votes.neutral}</p>
+      <p className={css.item}>Bad: {votes.bad}</p>
+      <p className={css.item}>Total: {totalVotes}</p>
+      <p className={css.item}>Positive: {positiveRate}%</p>
     </div>
   );
 }
-
-<p className={css.text}>No feedback yet</p>

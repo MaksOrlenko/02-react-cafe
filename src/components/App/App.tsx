@@ -1,14 +1,11 @@
 import { useState } from 'react';
 import type { Votes, VoteType } from '../../types/votes';
+import css from './App.module.css';
 
 import CafeInfo from '../CafeInfo/CafeInfo';
 import VoteOptions from '../VoteOptions/VoteOptions';
 import VoteStats from '../VoteStats/VoteStats';
 import Notification from '../Notification/Notification';
-
-import css from './App.module.css';
-
-<p className={css.text}>No feedback yet</p>
 
 export default function App() {
   const [votes, setVotes] = useState<Votes>({
@@ -38,15 +35,13 @@ export default function App() {
     totalVotes > 0 ? Math.round((votes.good / totalVotes) * 100) : 0;
 
   return (
-    <>
+    <div className={css.container}>
       <CafeInfo />
-
       <VoteOptions
         onVote={handleVote}
         onReset={resetVotes}
         canReset={totalVotes > 0}
       />
-
       {totalVotes > 0 ? (
         <VoteStats
           votes={votes}
@@ -56,6 +51,6 @@ export default function App() {
       ) : (
         <Notification />
       )}
-    </>
+    </div>
   );
 }

@@ -13,14 +13,21 @@ export default function VoteOptions({
   canReset,
 }: VoteOptionsProps) {
   return (
-    <div>
-      <button onClick={() => onVote('good')}>Good</button>
-      <button onClick={() => onVote('neutral')}>Neutral</button>
-      <button onClick={() => onVote('bad')}>Bad</button>
-
-      {canReset && <button onClick={onReset}>Reset</button>}
+    <div className={css.container}>
+      <button className={css.button} onClick={() => onVote('good')}>
+        Good
+      </button>
+      <button className={css.button} onClick={() => onVote('neutral')}>
+        Neutral
+      </button>
+      <button className={css.button} onClick={() => onVote('bad')}>
+        Bad
+      </button>
+      {canReset && (
+        <button className={css.button} onClick={onReset}>
+          Reset
+        </button>
+      )}
     </div>
   );
 }
-
-<p className={css.text}>No feedback yet</p>

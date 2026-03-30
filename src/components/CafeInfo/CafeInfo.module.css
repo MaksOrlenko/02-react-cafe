@@ -1,3 +1,11 @@
+.container {
+  margin-bottom: 16px;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
 .text {
-  color: #333;
+  margin: 0;
 }
