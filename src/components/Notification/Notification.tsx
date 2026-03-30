@@ -3,3 +3,5 @@ export default function Notification() {
 }
 
 import css from './Notification.module.css';
+
+<p className={css.text}>No feedback yet</p>

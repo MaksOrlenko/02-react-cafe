@@ -8,3 +8,5 @@ export default function CafeInfo() {
 }
 
 import css from './App.module.css';
+
+<p className={css.text}>No feedback yet</p>

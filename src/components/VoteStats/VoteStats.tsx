@@ -22,3 +22,5 @@ export default function VoteStats({
     </div>
   );
 }
+
+<p className={css.text}>No feedback yet</p>
