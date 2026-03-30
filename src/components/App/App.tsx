@@ -1,3 +1,4 @@
+import css from './App.module.css';
 import { useState } from 'react';
 import type { Votes, VoteType } from '../../types/votes';
 

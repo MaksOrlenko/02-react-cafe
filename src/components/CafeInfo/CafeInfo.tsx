@@ -6,3 +6,5 @@ export default function CafeInfo() {
     </div>
   );
 }
+
+import css from './App.module.css';
